@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+
+package test_proto;
+
+option go_package = "gRPC/assignment;go_assignment_grpc";
+
+
+service SimpleMath {
+    rpc Add (Number) returns (Out) {};
+    rpc Sub (Number) returns (Out) {};
+    rpc Mul (Number) returns (Out) {};
+    rpc Div (Number) returns (Out) {};
+  }
+  
+  message Number {
+    
+    int32 num1 = 1;
+    int32 num2 = 2;
+  }
+  
+  message Out {
+    
+    int32 out = 1; 
+  }
+  
