@@ -26,11 +26,7 @@ func main() {
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
-	//var n1, n2 int32
-	//fmt.Println("enter the first number:")
-	//n1,_ = fmt.Scanf()
-	//fmt.Println("enter the second number:")
-	//fmt.Scanf()
+
 	if os.Args[1] == "add" {
 		r, err := c.Add(ctx, &pb.Number{Num1: 55, Num2: 11})
 		if err != nil {
